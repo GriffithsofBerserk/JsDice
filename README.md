@@ -1,1 +1,1 @@
-# JsDice
+# JsRollTheDice
