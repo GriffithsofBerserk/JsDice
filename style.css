@@ -102,3 +102,28 @@ main{
     display:inline-block;
     margin-right:0.7rem;
 }
+.btn--new{
+    top:15%;
+}
+.btn--roll{
+    top:60%;
+}
+.btn--hold{
+    top:80%;
+}
+.btn:active{ 
+    transform: translate(30%,1px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+}
+.btn:focus{
+    outline:none;
+}
+.dice{
+    position: absolute;
+    height:10rem;
+    left:50%;
+    transform: translateX(-50%);
+    top:30%;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.2);
+    border-radius: 2.5rem;
+}
