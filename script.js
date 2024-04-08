@@ -49,6 +49,18 @@ const switchPlayer = function(){
 };
 
 btnRoll.addEventListener('.click', function(){
+    if (playing) {
+        const dice = Math.trunc(Math.random()*6*+1);
+    }
+    diceEL.classList.remove('hidden');
+    diceEL.src=`dice-${dice}.png`;
 
+    if (dice!==1) {
+        currentScore +=dice;
+        document.getElementById('.current--${activePlayer}').textContent = currentScore;
+    }
+    else{
+        switchPlayer();
+    }
 });
 
