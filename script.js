@@ -64,3 +64,25 @@ btnRoll.addEventListener('.click', function(){
     }
 });
 
+btnHold.addEventListener('.click', function(){
+    if (playing) {
+        scores[activePlayer] += currentScore;
+        document.querySelector(`score--${activePlayer}`).textContent = scores[activePlayer];
+
+    if (scores[activePlayer]>=100) {
+        playing = false;
+        diceEL.classList.remove('hidden');
+    }
+
+    document.querySelector(`.player--
+    ${activePlayer}`).classList.add('.player--winner');
+
+    document.querySelector(`.player--
+    ${activePlayer}`).classList.remove('player-active');
+
+    }
+        else{
+            switchPlayer();
+        }
+})
+
